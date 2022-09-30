@@ -1,24 +1,26 @@
-import {Routes,Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import React from "react";
-import Login from "../Login/Login"
+import Login from "../Login/Login";
 import PrivateRoutes from "./PrivateRoutes";
-import Signup from "../Login/Signup"
-const AllRoutes=()=>{
+import Signup from "../Login/Signup";
+import shopAll from "../Shops/ShopAll";
+import LandingPage from "../LandingPage/LandingPage";
+const AllRoutes = () => {
   return (
     <>
-    <Routes>
-    <Route path="/login" element={<Login />} />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<Login />} />
 
-    <Route path="/signup" element={<Signup />} />
+        <Route path="/signup" element={<Signup />} />
 
-    <Route />
+        <Route path="/shopall" element={<shopAll />} />
 
-    <Route />
+        <Route />
 
-    <Route />
-
-    </Routes>
+        <Route />
+      </Routes>
     </>
-  )
-}
-export default AllRoutes
+  );
+};
+export default AllRoutes;
