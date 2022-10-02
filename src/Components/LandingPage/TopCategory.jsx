@@ -8,60 +8,60 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import BS_Slider from "./BS_Slider";
-
-const BestSeller = () => {
-
- 
+import { get_BestSeller } from "../API/api";
+// import { TP_Slider_Function } from "./TP_Slider";
+import TP_Slider  from "./TP_Slider";
+const TopCategory = () => {
+  const [tabs, setTabs] = useState("bodycare");
+  const [color, setColor] = useState();
   return (
     <>
       <Container marginTop={"25px"}>
         <Center>
-          <Text fontFamily={"Gilroy Regular"}
-          fontSize={["18px", "18px", "18px", "26px"]}
-          >OUR</Text>
+          <Text fontSize={["18px", "18px", "18px", "26px"]}>SHOP OUR</Text>
         </Center>
         <Center>
           <Text
-            fontWeight="italic" fontFamily={"Gilroy semibold"}
+            fontWeight="semibold"
             fontSize={["31px", "31px", "31px", "37px"]}
           >
-            BEST SELLERS
+            TOP CATEGORIES
           </Text>
         </Center>
       </Container>
-      <Container marginTop={"15px"}>
+      <Box marginTop={"15px"}>
         <Center>
           <HStack spacing="24px">
             <Box
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer" }}              
             >
-              SKIN
+              FACE CREAMS
+            </Box>
+            <Box>|</Box>
+            <Box
+              style={{ cursor: "pointer" }}
+            
+            >
+              FACE SERUMS
             </Box>
             <Box>|</Box>
             <Box
               style={{ cursor: "pointer" }}
             >
-              BODYCARE
+              FACE WASHES
             </Box>
             <Box>|</Box>
             <Box
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer" }}              
             >
-              HAIRCARE
-            </Box>
-            <Box>|</Box>
-            <Box
-              style={{ cursor: "pointer" }}
-            >
-              NUTRITION
+              FACE MASKS
             </Box>
           </HStack>
         </Center>
-      </Container>
-      <BS_Slider  />
+      </Box>
+      <TP_Slider/>
     </>
   );
 };
 
-export default BestSeller;
+export default TopCategory;
