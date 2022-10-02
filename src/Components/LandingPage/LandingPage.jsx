@@ -1,25 +1,31 @@
-import BestSellerData from "./BestSellerData";
-import NewArrivalData from "./NewArrivalData";
-import SpotLight from "./SpotLight";
-import TopCatogeires from "./TopCatogeries";
-import Ingrdient from "./Ingrdient";
-import Love from "./Love";
-import Spin from "./Spin";
-import Reviews from "./Reviews";
-import NavbarBottomSlider from "./NavbarBottomSlider";
+import React from 'react'
+import Navbar from '../Navbar/Navbar'
+import BestSeller from './BestSeller'
+import CleanBeauty from './CleanBeauty'
+import DownloadApp from './DownloadApp'
+import LovedBy from './LovedBy'
+import LoveGreat from './LoveGreat'
+import LP_Slider from './LP_Slider'
+import TopCatogeries from './TopCategory'
+import NewArrival from './NewArrival'
+import Spotlight from './Spotlight'
+import Reviews from './Reviews'
+
 const LandingPage = () => {
   return (
     <>
-      <NavbarBottomSlider />
-      <Spin />
-      <NewArrivalData />
-      <BestSellerData />
-      <SpotLight />
-      <TopCatogeires />
-      <Ingrdient />
-      <Love />
-      <Reviews />
+        <LP_Slider/>
+        <LovedBy/>
+        <NewArrival/>
+        <BestSeller/>
+        <Spotlight/>
+        <TopCatogeries/>
+        <DownloadApp/>
+        <LoveGreat/>
+        <CleanBeauty/>
+        <Reviews />
     </>
-  );
-};
-export default LandingPage;
+  )
+}
+
+export default LandingPage

@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import {
-  FormControl,
   Avatar,
   Box,
-  Stack,
   Button,
   Checkbox,
   Flex,
@@ -13,42 +11,58 @@ import {
   InputLeftAddon,
   Spacer,
   Text,
-  WrapItem
+  WrapItem,Stack, FormControl,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import AppContext from "../Context/AppContext";
+import { AppContext } from "../Context/AppContext";
+import { Link} from "react-router-dom";
+
 
 const Checkout = () => {
-  const [userData, setUserData] = useState([]);
-  const handleDiscount = (e) => {
+  const { userData, handleLogout, fName, lName, email, token, orderProduct } = useContext(AppContext);
+  const total = userData.reduce(
+    (prevValue, el) => prevValue + Number(el.price),
+    0
+  );
+  const handleChange=(e)=>{
     e.preventDefault();
-  };
-  const handleDiscountCode = () => {};
-
+    }
+  const code="MASAI200"
+  const handleDiscount=()=>{
+     if(handleChange=== code){
+      alert("you have 200rupee discount")
+     }
+     else{
+      alert("please enter the correct code")
+     }
+  }
+  
+  const orderProductData=()=>{
+    alert("Your order successfully done we will deliver you product with in 5-7 working days")
+   return (
+    setTimeout(()=>{
+       <Link to={"/"} />
+   },2000)
+   )
+  }
+  console.log(userData);
   return (
     <>
-      <Image
-        height="160px"
-        width="100%"
-        src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-08-28/checkout%20top%20image_794110.jpeg"
-      />
-      <Box padding="15px 50px">
+      <Image src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-08-28/checkout%20top%20image_794110.jpeg" />
+      <Box padding={"15px 50px"}>
         <Flex>
-          <Box w="60%" h="500px" marginTop="20px">
-            <Text
-              fontSize="20px"
-              fontWeight="light"
-              fontFamily="Lato, sans-serif"
-              marginLeft="-580px"
-            >
-              Contact information
-            </Text>
-            <Stack direction="row">
+          <Box padding={"10px 25px"} w={"60%"} h="500px">
+            <Text 
+            fontWeight={"light"}
+            fontSize="20px"
+            fontFamily="Lato, sans-serif"
+            >Contact information</Text>
+           
+           <Stack direction="row">
               <Text
                 fontSize="20px"
                 fontWeight="light"
                 fontFamily="Lato, sans-serif"
-                fontSize="16px"
+               
               >
                 Already have an account?
               </Text>
@@ -64,32 +78,31 @@ const Checkout = () => {
                 </Text>{" "}
               </Link>
             </Stack>
-            <Flex marginTop="10px" gap="4">
+
+            <Flex marginTop={"10px"} gap={"4"}>
               <Box>
-                <Input
+               <Input 
                   marginBottom="10px"
                   type="email"
                   placeholder="Email"
-                  width="748px"
-                />
+                  width="700px"
+               />
               </Box>
             </Flex>
-            <Checkbox marginTop="10px" marginLeft="-350px" defaultChecked>
+            <Checkbox marginTop={"10px"} defaultChecked>
               Keep me up to date on news and exclusive offers
             </Checkbox>
-            <Text
-              marginTop="35px"
-              marginBottom="10px"
-              fontFamily="Lato,sans-serif"
-              fontSize="20px"
-              fontWeight="light"
-              marginLeft="-580px"
-            >
+            <Text marginTop={"15px"}
+             marginBottom="10px" fontFamily={"Lato,sans-serif"}
+             fontWeight={"light"}
+             fontSize="20px">
               Shipping address
             </Text>
             <Flex gap={"2"}>
-              <Input marginBottom={"10px"} placeholder="First name" />
-              <Input marginBottom={"10px"} placeholder="Last name" />
+              <Input marginBottom={"10px"} 
+              placeholder="First name" />
+              <Input marginBottom={"10px"} 
+              placeholder="Last name" />
             </Flex>
             <Input marginBottom={"10px"} placeholder="Address" />
             <Input marginBottom={"10px"} placeholder="Apartment" />
@@ -108,31 +121,24 @@ const Checkout = () => {
               <InputLeftAddon children="+91" />
               <Input type="tel" placeholder="Phone" />
             </InputGroup>
-            <Checkbox marginBottom={"10px"} marginLeft="-482px">
+            <Checkbox marginBottom={"10px"}>
+              {" "}
               Get Order Updates On WhatsApp
-            </Checkbox>{" "}
-            <br />
-            <Checkbox marginBottom={"10px"} marginLeft="-482px">
-              Save this information for next time
             </Checkbox>
             <Flex alignItems={"center"} justifyContent={"space-between"}>
               <Text color={"red"}>{"<"} Return to cart</Text>
               <Link to="/">
-                {/* onClick={() => orderProduct(total)} */}
-                <Button color={"white"} bg={"#616160"}>
-                  Order
-                </Button>
+              <Button onClick={orderProductData} color={"white"} bg={"#616160"}>
+                Order
+              </Button>
               </Link>
+              
             </Flex>
           </Box>
           <Box padding={"15px 20px"} bg={"#fafafa"} h="500px" w={"40%"}>
             <Flex gap={1}>
-              <Text fontSize="16px" color="gray" fontFamily="Lato, sans-serif">
-                Pay now and get{" "}
-              </Text>{" "}
-              <Text color="red" fontSize="16px" fontFamily="Lato, sans-serif">
-                3% instant discount.
-              </Text>
+              <Text>Pay now and get </Text>{" "}
+              <Text color="red">3% instant discount.</Text>
             </Flex>
             <Box border={"1px solid black"} height={"56%"} overflowY={"scroll"}>
               {userData?.map((el) => (
@@ -150,20 +156,14 @@ const Checkout = () => {
               ))}
             </Box>
             <Flex marginTop={"15px"} gap="4">
-              <FormControl onClick={handleDiscount}>
-                <Input
-                  bg="white"
-                  onChange={handleDiscountCode}
-                  placeholder="Gift card or Discount code"
-                />
-                <Button
-                  color={"white"}
-                  colorScheme="#c8c8c8"
-                  type="submit"
-                  bg="#c8c8c8"
-                >
-                  APPLY
-                </Button>
+            <FormControl onSubmit={handleDiscount}>
+              <Input bg={"white"}
+               placeholder="Gift card or Discount code"
+                onChange={handleChange} />
+              <Button color={"white"} type="submit"
+              colorScheme="#c8c8c8" bg="#c8c8c8">
+                APPLY
+              </Button>
               </FormControl>
             </Flex>
             <Flex
@@ -172,24 +172,15 @@ const Checkout = () => {
               alignItems="center"
             >
               <Text>Subtotal</Text>
-              <Text>₹total</Text>
+              <Text>₹{total}</Text>
             </Flex>
-            {/* <Flex
-              marginTop={"7px"}
-              justifyContent={"space-between"}
-              alignItems="center"
-            >
-              <Text>Shipping</Text>
-              <Text>Calculated at next step</Text>
-            </Flex> */}
-
             <Flex
               marginTop={"7px"}
               justifyContent={"space-between"}
               alignItems="center"
             >
               <Text>Total</Text>
-              <Text> ₹total</Text>
+              <Text> ₹{total}</Text>
             </Flex>
           </Box>
         </Flex>
@@ -197,4 +188,5 @@ const Checkout = () => {
     </>
   );
 };
+
 export default Checkout;

@@ -13,6 +13,7 @@ import { Pagination, Navigation } from "swiper";
 const Reviews = () => {
   return (
     <>
+    <div >
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -25,11 +26,14 @@ const Reviews = () => {
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
+        style={{width:"70%", height:"70%"}}
       >
-        <SwiperSlide>
-          <Box maxW="sm" borderWidth="1px"
+        <SwiperSlide style={{bg:"white"}}>
+          <Box maxW="sm"
+           borderWidth="1px" style={{bg:"white"}}
             bg="#F5F5F5" borderRadius="lg" overflow="hidden">
             <Box width="40%" margin="auto"
+           
            >
               <Image
                 borderRadius="10px"
@@ -395,6 +399,7 @@ const Reviews = () => {
           </Box>
         </SwiperSlide>
       </Swiper>
+      </div>
     </>
   );
 };

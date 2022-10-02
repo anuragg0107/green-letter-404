@@ -1,32 +1,21 @@
-import "./styles.css";
-import AllRoutes from "./Components/Routes/AllRoutes";
-import Navbar from "./Components/Navbar/Navbar.jsx";
-import Footer from "./Components/Footer/Footer";
-import SingleProduct from "./Components/Shops/SingleProduct";
-import ShopAll from "./Components/Shops/ShopAll";
-import ProductSlider from "./Components/Shops/ProductSlider";
-import Checkout from "./Components/Checkout/Checkout";
-import Bag from "./Components/Navbar/Bag";
-import MyAccount from "./Components/Login/MyAccount";
-import Signup from "./Components/Login/Signup";
-export default function App() {
+import logo from './logo.svg';
+import './App.css';
+import Navbar from './Components/Navbar/Navbar';
+import LP_Slider from './Components/LandingPage/LP_Slider';
+import LandingPage from './Components/LandingPage/LandingPage';
+import { Container } from '@chakra-ui/react';
+import Footer from './Components/Footer/Footer';
+import AllRoutes from './Components/Routes/AllRoutes';
+
+function App() {
   return (
-    <div className="App">
-      {/* <Navbar />
-      <AllRoutes />
-      <Footer /> */}
-      {/* <Bag /> */}
-      <Signup />
-      {/* <MyAccount /> */}
-      {/* <SingleProduct /> */}
-      {/* <Navbar />
-      <AllRoutes /> */}
-      {/* <Checkout /> */}
-      {/* <ShopAll /> */}
-      {/* <Footer /> */}
-      {/* <ProductSlider /> */}
-      {/* <Checkout /> */}
-      {/* <Bag /> */}
+    <div>
+      
+      <Navbar/>
+      <AllRoutes/>
+      <Footer/>
     </div>
   );
 }
+
+export default App;
