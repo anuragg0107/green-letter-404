@@ -6,7 +6,6 @@ import Login from "../LoginPage/Login";
 import MyAccount from "../LoginPage/MyAccount";
 import Register from "../LoginPage/Register";
 import ShopAll from "../ShopAll/ShopAll";
-import SingleProduct from "../ShopAll/SingleProduct";
 import PrivateRoutes from "./PrivateRoutes";
 
 const AllRoutes = () => {
@@ -25,7 +24,6 @@ const AllRoutes = () => {
           }
         />
         <Route path="/shopall" element={<ShopAll />} />
-        <Route path="/singleproduct" element={<SingleProduct />} />
         <Route
           path="/checkout"
           element={

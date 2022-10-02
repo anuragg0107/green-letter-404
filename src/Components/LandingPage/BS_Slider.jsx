@@ -44,14 +44,7 @@ function SamplePrevArrow(props) {
 }
 
 export function BS_Slider_Function({data}) {
-  //   // console.log(value);
-  //   const navigate = useNavigate();
-  //   const handleClick = (value) => {
-  //     navigate("/singleproduct", { state: value });
-  //   };
-  // const {addToCart} = useContext(AppContext);
-  // const drawerBag = useDisclosure();
-  // return <BS_Slider drawerBag={drawerBag} addToCart={addToCart} handleClick={handleClick} data={data}/>;
+ 
 }
 
 export default class BS_Slider extends Component {

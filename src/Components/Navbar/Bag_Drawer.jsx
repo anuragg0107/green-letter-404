@@ -46,10 +46,6 @@ const Bag_Drawer = ({ onClose, isOpen }) => {
                 ))}
             </Box>
             <Box marginTop={"25px"}>
-              {/* <Flex alignItems={"center"} justifyContent={"space-between"}>
-                <Text fontSize={"18px"}>SUBTOTAL</Text>
-                <Text fontSize={"18px"}>Rs: {totalPrice}</Text>
-              </Flex> */}
               <Text marginTop={"21px"} fontSize={"12.5px"}>FREE SHIPPING OVER Rs.499/-</Text>
               <Text fontSize={"12.5px"}>COD NOT APPLICABLE BELOW Rs.499</Text>
               <Link to="checkout">

@@ -16,11 +16,11 @@ I worked on this project during unit-4 construct week at Masai School.
  />
 
 ## Important Links 🔗
-<a href="https://busy-channel-5933-kfc.netlify.app/">Deployed Netlify Link</a>
+<a href="https://dotandkey1.netlify.app/">Deployed Netlify Link</a>
 <br>
 <a href="https://github.com/anuragg0107/green-letter-404.git">Github Link</a>
 <br>
-<a href="https://drive.google.com/file/d/1-MC99ch5urcRBOrxV5c5sK_vja8_h9t5/view?usp=sharing">Project presentation</a>
+<a href="https://drive.google.com/file/d/1N1OtOpx7T6t8HOb-A99rbcm2KzoPevDF/view?usp=sharing">Project presentation</a>
 
 ## Screenshots
 

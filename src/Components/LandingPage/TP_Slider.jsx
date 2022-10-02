@@ -80,10 +80,6 @@ export default class TP_Slider extends Component {
       ]
     };
 
-    // const drawerBag = this.props.drawerBag
-    // const addToCart = this.props.addToCart
-    // const handleClick = this.props.handleClick
-    // const data = this.props.data;
 
     return (
       <div style={{ margin: "auto",
