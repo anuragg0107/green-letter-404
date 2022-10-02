@@ -8,9 +8,9 @@ We want to change how we look after ourselves by drawing attention to the areas 
 I worked on this project during unit-4 construct week at Masai School.
 
 ## Using Languages & Tools 🧰
-<img width="26px" src="https://reactjs.org/logo-og.png" alt="react"
+<img width="40px" src="https://reactjs.org/logo-og.png" alt="react"
 />
-<img width="26px" src="https://www.drupal.org/files/project-images/logo_106.png" alt="swiper"
+<img width="40px" src="https://www.drupal.org/files/project-images/logo_106.png" alt="swiper"
  />
  <ima width="26px" src="https://cms-assets.tutsplus.com/uploads/users/30/posts/31355/preview_image/pre.png" alt="slick"
  />
@@ -25,22 +25,22 @@ I worked on this project during unit-4 construct week at Masai School.
 ## Screenshots
 
 
-![Home Page](./public/Images/home.jpg)
+![Home Page](../green-letter-404//public/Images/home.jpg)
 Home page of the website.
 
-![Login/Signup](./public/Images/signup.jpg)
+![Login/Signup](../green-letter-404//public/Images/signup.jpg)
 Login and Signup page where user can login or signup in website. 
 
-![Account](./public/Images/account.jpg)
+![Account](../green-letter-404//public/Images/account.jpg)
 Here you can seen you details and also you can logout.
 
-![Products Page](./public/Images/products.jpg)
+![Products Page](../green-letter-404/public/Images/products.jpg)
 In this page you can see all kinds of products are available.
 
-![Bag Page](./public/Images/bag.jpg)
+![Bag Page](../green-letter-404/public/Images/bag.jpg)
 In bag page you can see which quantity added.
 
-![Checkout Page](./public/Images/checkout.jpg)
+![Checkout Page](../green-letter-404/public/Images/checkout.jpg)
 Checkout page with total amount of all the cart product and transaction.
 
 ## Features
