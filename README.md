@@ -25,22 +25,22 @@ I worked on this project during unit-4 construct week at Masai School.
 ## Screenshots
 
 
-![Home Page](../green-letter-404//public/Images/home.jpg)
+![Home Page](../green-letter-404/src/Images/home.jpg)
 Home page of the website.
 
-![Login/Signup](../green-letter-404//public/Images/signup.jpg)
+![Login/Signup](../green-letter-404/src/Images/signup.jpg)
 Login and Signup page where user can login or signup in website. 
 
-![Account](../green-letter-404//public/Images/account.jpg)
+![Account](../green-letter-404/src/Images/account.jpg)
 Here you can seen you details and also you can logout.
 
-![Products Page](../green-letter-404/public/Images/products.jpg)
+![Products Page](../green-letter-404/src/Images/products.jpg)
 In this page you can see all kinds of products are available.
 
-![Bag Page](../green-letter-404/public/Images/bag.jpg)
+![Bag Page](../green-letter-404/src/Images/bag.jpg)
 In bag page you can see which quantity added.
 
-![Checkout Page](../green-letter-404/public/Images/checkout.jpg)
+![Checkout Page](../green-letter-404/src/Images/checkout.jpg)
 Checkout page with total amount of all the cart product and transaction.
 
 ## Features
