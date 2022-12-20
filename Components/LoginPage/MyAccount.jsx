@@ -31,7 +31,8 @@ const MyAccount = () => {
           <Box>
             <Heading>Account details</Heading>
             <br />
-            <Text>
+            <Text fontFamily={"Gilroy Regular"}
+            fontWeight="semibold">
               {fName} {lName}
             </Text>
             <Text>India</Text>

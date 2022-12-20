@@ -12,17 +12,17 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import { Navigate, useNavigate, useSearchParams } from "react-router-dom";
+import { Navigate, useNavigate} from "react-router-dom";
 import { AppContext } from "../Context/AppContext";
 import Bag_Drawer from "../Navbar/Bag_Drawer";
 
 const ShopAll = () => {
   const [data, setData] = useState([]);
-  let [searchParams, setSearchParams] = useSearchParams();
+
 
 
 const getData=async()=>{
-    const res= await fetch('http://localhost:3001/posts');
+    const res= await fetch('https://dotandkey-api.vercel.app/posts');
     setData(await res.json())
 };
 
